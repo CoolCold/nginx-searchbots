@@ -20,7 +20,7 @@ put both files into nginx's `conf.d` directory, in your vhost log definition, us
 access_log /var/log/nginx/exammple.org.collectd.access.log collectd_prepared buffer=64k flush=10s;
 ```
 ## Collectd
-TODO - add sample `tail` plugin config excerpt
+check `examples/collectd-tail.conf` file - note that listing all bots possible likely is not good idea, those chosen are per personal taste of the author/required info.
 ## Grafana
 TODO - add sample graph
 ## other ways
@@ -82,6 +82,10 @@ Measurement is very accurate, as it logs of your webserver, not a uBlock shunned
 Short answer - no. Long asnwer - until you have something like 1000 requests per second ( special note for Singapore - 60*1000 requests per minute), you may not care. If you have more, than that, better consult with your system administrator to make sure about disk io.
 ## Bot definition is missing, how to add?
 Submit issue here
+
+# helpers / hints
+
+there is `scripts/getuseragents.sh` provided for ease up traversing standard Nginx logs
 
 # log collector
 here comes log collector with ![pixel](http://gh-tracker.extp.coolcold.org/tracker.gif) image.
